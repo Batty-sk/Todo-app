@@ -1,11 +1,17 @@
 import React from 'react';
 import './App.css';
-import Checkbox from './components/Checkbox';
-
+import ToDoRow from './components/ToDoRow';
 function App() {
+
+  const handleAdd = () =>{
+    console.log('added the task successfully! ')
+  }
+  const handleDelete = (id:number)=>{
+    console.log('handiliniggn delete',handleDelete)
+  }
   return (
     <div className="App">
-      <Checkbox label='Todo 1' />
+      <ToDoRow label='batman' no={1} delete={handleDelete}/>
     </div>
   );
 }
