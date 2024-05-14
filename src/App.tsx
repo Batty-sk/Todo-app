@@ -7,8 +7,8 @@ function App() {
   const [tasks,setTasks]=useState<string[]>([])
 
   const handleAdd = (name:string) =>{
-    setTasks([...tasks,name])
-    console.log('added the task successfully! ')
+    if (name.length)
+      setTasks([...tasks,name])
 
   }
   const handleDelete = (id:number)=>{
