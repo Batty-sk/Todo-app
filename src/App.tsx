@@ -11,7 +11,7 @@ function App() {
   }
   return (
     <div className="App">
-      <ToDoRow label='batman' no={1} delete={handleDelete}/>
+      <ToDoRow label='batman' no={1} Delete={handleDelete}/>
     </div>
   );
 }

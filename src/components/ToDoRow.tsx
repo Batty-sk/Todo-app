@@ -6,20 +6,17 @@ type todoInfo = {
     label:string,
     //function also to call the deletetion of todoRow
     no:number,
-    Delete:any
-
+    Delete:(id: number) => void;
 
 }
 const ToDoRow:React.FC<todoInfo> = ({label, no, Delete}) => {
     const [mouseHovering,setMouseHovering] = useState<boolean>(false)
     
-    const handleDelete = (id:number)=>{
-Delete(no)
-    }
+
   return (
-    <div className='flex w-52 border justify-between items-center' onMouseEnter={()=>{setMouseHovering(true)}} onMouseLeave={()=>{setMouseHovering(false)}}>
+    <div className='flex p-6 w-52 border justify-between items-center' onMouseEnter={()=>{setMouseHovering(true)}} onMouseLeave={()=>{setMouseHovering(false)}}>
         <Checkbox label={label} /> 
-       {mouseHovering && <span onClick={()=>handleDelete(1)}> 
+       {mouseHovering && <span onClick={()=>Delete(no)}> 
         <DeletebtnSmall/>
         </span>}
     </div>
