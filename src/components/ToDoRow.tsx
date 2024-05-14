@@ -11,10 +11,9 @@ type todoInfo = {
 }
 const ToDoRow:React.FC<todoInfo> = ({label, no, Delete}) => {
     const [mouseHovering,setMouseHovering] = useState<boolean>(false)
-    
-
+  
   return (
-    <div className='flex p-6 w-52 border justify-between items-center' onMouseEnter={()=>{setMouseHovering(true)}} onMouseLeave={()=>{setMouseHovering(false)}}>
+    <div className='flex p-6 w-72 border justify-between items-center m-5' onMouseEnter={()=>{setMouseHovering(true)}} onMouseLeave={()=>{setMouseHovering(false)}}>
         <Checkbox label={label} /> 
        {mouseHovering && <span onClick={()=>Delete(no)}> 
         <DeletebtnSmall/>
