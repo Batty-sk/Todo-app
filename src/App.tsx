@@ -19,6 +19,7 @@ function App() {
   }
   return (
     <div className="App h-screen w-screen flex flex-col justify-center items-center  ">
+      <h1 className='text-mono text-5xl  mb-20'>The Future University</h1>
       <div className='p-5 bg-orange-100 flex flex-col justify-center items-center'>
       <h1 className='font-bold text-5xl mb-10'>To-Do App</h1>
       {tasks.map((task,indx)=>{
