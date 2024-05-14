@@ -5,11 +5,11 @@ type labelProp= {
 const Checkbox:React.FC<labelProp>= ({label}) => {
     const [checked,setChecked] =useState<boolean>(false)
   return (
-    <div className='flex border'>
+    <div className='flex'>
         <input type="checkbox" checked={checked} onChange={()=>{
             setChecked(value=>!value)
         }} />
-        <span>{label}</span>
+        <span className='text-5xl bg-red-400'>{label}</span>
     </div>
   )
 }
