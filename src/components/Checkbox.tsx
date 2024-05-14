@@ -9,7 +9,7 @@ const Checkbox:React.FC<labelProp>= ({label}) => {
         <input type="checkbox" checked={checked} onChange={()=>{
             setChecked(value=>!value)
         }} />
-        <span className='text-5xl bg-red-400'>{label}</span>
+        <span className='font-mono font-bold'>{label}</span>
     </div>
   )
 }

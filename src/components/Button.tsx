@@ -1,9 +1,12 @@
-import React from 'react'
 
-const Button = () => {
+export const AddbtnBig = () => {
   return (
-    <div>Button</div>
+    <button className='rounded-md bg-green-500 text-white'>Add</button>
   )
 }
 
-export default Button
+export const DeletebtnSmall =()=>{
+return (
+        <button className='rounded-md bg-green-500 text-white'>X</button>
+)
+}
